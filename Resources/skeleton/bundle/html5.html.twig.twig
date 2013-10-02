@@ -1,0 +1,13 @@
+{% set content = '{% extends "OryzoneBoilerplateBundle::html5.html.twig" %}
+
+{% block head_css %}
+    {% stylesheets
+    output=\'css/style.css\'
+    filter=\'?sass\'
+    \'components/normalize.css/normalize.css\'
+    \'components/html5-boilerplate/css/main.css\'
+    \'@' ~ bundle ~ '/Resources/private/css/style.scss\' %}
+    <link rel="stylesheet"  href="{{ asset_url }}" >
+    {% endstylesheets %}
+{% endblock head_css %}' %}
+{{ content }}
