@@ -25,7 +25,7 @@
     "require": {
         "symfony/framework-bundle": ">=2.0,<3.0-dev",
         "oryzone/boilerplate-bundle": "4.*",
-        "gta-cool/inuitcss-bundle": "5.0.1"
+        "gta-cool/inuitcss-bundle": "5.0.*"
     },
     "autoload": {
         "psr-0": { "GtaCool\\Bundle\\Html5InuitCssBoilerplateBundle": "" }
