@@ -1,0 +1,39 @@
+{
+    "name": "gta-cool/html5-inuitcss-boilerplate-bundle",
+    "type": "symfony-bundle",
+    "description": "Integrates html5 boilerplate and inuit.css framework in Symfony2",
+    "keywords": [
+        "html",
+        "html5",
+        "boilerplate",
+        "h5b",
+        "twig",
+        "SASS",
+        "BEM",
+        "OOCSS",
+        "framework"
+    ],
+    "homepage": "https://github.com/Gta-Cool/GtaCoolHtml5InuitCssBoilerplateBundle",
+    "license": "Apache-2.0",
+    "authors": [
+        {
+            "name": "Jonathan Plugaru",
+            "email": "jplugaru@hotmail.fr",
+            "homepage": "https://github.com/Gta-Cool"
+        }
+    ],
+    "require": {
+        "symfony/framework-bundle": ">=2.0,<3.0-dev",
+        "oryzone/boilerplate-bundle": "4.*",
+        "gta-cool/inuitcss-bundle": "5.0.1"
+    },
+    "autoload": {
+        "psr-0": { "GtaCool\\Bundle\\Html5InuitCssBoilerplateBundle": "" }
+    },
+    "target-dir": "GtaCool/Bundle/Html5InuitCssBoilerplateBundle",
+    "extra": {
+        "branch-alias": {
+            "dev-master": "1.0.x-dev"
+        }
+    }
+}
