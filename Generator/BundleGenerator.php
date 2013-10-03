@@ -2,7 +2,7 @@
 
 namespace GtaCool\Bundle\Html5InuitCssBoilerplateBundle\Generator;
 
-use Sensio\Bundle\GeneratorBundle\Generator\BundleGenerator as BaseBundleGenerator;
+use GtaCool\Bundle\InuitCssBundle\Generator\BundleGenerator as BaseBundleGenerator;
 use Symfony\Component\Filesystem\Filesystem;
 
 /**
@@ -26,18 +26,21 @@ class BundleGenerator extends BaseBundleGenerator
      * Constructor
      *
      * @param Filesystem $filesystem
-     * @param string $skeletonDir
+     * @param string $resourcesInstallationDir
      *
      * @throws \InvalidArgumentException
      */
-    public function __construct(Filesystem $filesystem, $skeletonDir)
+    public function __construct(Filesystem $filesystem, $resourcesInstallationDir)
     {
-        if (!is_string($skeletonDir)) {
-            throw new \InvalidArgumentException("\"$skeletonDir\" must be a string");
+        if (!is_string($resourcesInstallationDir)) {
+            throw new \InvalidArgumentException("\"$resourcesInstallationDir\" must be a string");
         }
 
+        // Need call parent constructor
+        parent::__construct($filesystem, $resourcesInstallationDir);
+
         $this->filesystem = $filesystem;
-        $this->skeletonDir = $skeletonDir;
+        $this->skeletonDir = __DIR__.'/../Resources/skeleton';
     }
 
     public function generate($namespace, $bundle, $dir, $format, $structure)
