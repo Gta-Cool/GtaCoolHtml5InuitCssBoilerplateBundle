@@ -52,6 +52,6 @@ class BundleGenerator extends BaseBundleGenerator
             'bundle' => $bundle,
         );
         $this->setSkeletonDirs(array($this->skeletonDir));
-        $this->renderFile('bundle/html5.html.twig.twig', $dir.'/Resources/views/Base/html5.html.twig', $parameters);
+        $this->renderFile('bundle/base.html.twig.twig', $dir.'/Resources/views/Base/base.html.twig', $parameters);
     }
 }
